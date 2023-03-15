@@ -1,0 +1,792 @@
+{
+	"info": {
+		"_postman_id": "a14529b4-4940-4293-a918-47d08b4dcc19",
+		"name": "FullCycle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "946292"
+	},
+	"item": [
+		{
+			"name": "fc3-admin-do-catalogo",
+			"item": [
+				{
+					"name": "categories",
+					"item": [
+						{
+							"name": "search categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "perPage",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove a category",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/categories/:categoryId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"categories",
+										":categoryId"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "443f508f-c52a-4406-a291-82b1d8f41cc3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update a category",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Banidos\",\r\n    \"is_active\": \"true\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/categories/:categoryId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"categories",
+										":categoryId"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "7cf89737-c06e-416e-b176-f029ac6d9a7e"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create a category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Documetarsios\",\r\n    \"description\": \"categoria de documentasrios\",\r\n    \"is_active\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve a category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/categories/:categoryId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"categories",
+										":categoryId"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "914e2926-c765-4ec3-9348-9606e8b89210"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "cast members",
+					"item": [
+						{
+							"name": "search cast members",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/cast_members?perPage=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cast_members"
+									],
+									"query": [
+										{
+											"key": "perPage",
+											"value": "10"
+										},
+										{
+											"key": "search",
+											"value": "maria",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove a cast member",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/cast_members/:memberId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cast_members",
+										":memberId"
+									],
+									"variable": [
+										{
+											"key": "memberId",
+											"value": "ad629f07-2d01-48fc-8891-77453771f3be"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update a cast member",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Patricio Cois\",\r\n    \"type\": \"DIRECTOR\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/cast_members/:memberId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cast_members",
+										":memberId"
+									],
+									"variable": [
+										{
+											"key": "memberId",
+											"value": "17306d9f-b7ff-4f2d-ace0-9a4a18444005"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create a cast member",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Marcus Mellen\",\r\n    \"type\": \"ACTOR\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/cast_members",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cast_members"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve a cast member",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/cast_members/:memberId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cast_members",
+										":memberId"
+									],
+									"variable": [
+										{
+											"key": "memberId",
+											"value": "17306d9f-b7ff-4f2d-ace0-9a4a18444005"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "genres",
+					"item": [
+						{
+							"name": "search genres",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/genres",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"genres"
+									],
+									"query": [
+										{
+											"key": "perPage",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create a genre",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Banidos\",\r\n    \"is_active\": \"true\",\r\n    \"categories_id\": [\r\n        \"440e10c4a25b4581a0bacc50bc7e6435\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/genres",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"genres"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieve a genre",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/genres/:genreId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"genres",
+										":genreId"
+									],
+									"variable": [
+										{
+											"key": "genreId",
+											"value": "bd6b3075-f0fd-4bf1-a13d-9aa630f73e1a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove a genre",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/genres/:genreId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"genres",
+										":genreId"
+									],
+									"variable": [
+										{
+											"key": "genreId",
+											"value": "bd6b3075-f0fd-4bf1-a13d-9aa630f73e1a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update a genre",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Banidos\",\r\n    \"is_active\": \"true\",\r\n    \"categories_id\": [\r\n        \"108b24d9-2a92-41ec-bfbf-6021258f1bc1\",\r\n        \"532b6264-8cc8-4d23-bd0b-6d82a93fc253\",\r\n        \"f59394a3-67b7-4cf8-a91f-2b8b275f97bc\",\r\n        \"e0a73c81-c64b-424e-a4c8-b4261fe86143\",\r\n        \"b64cbef8-ce8e-4a8c-9bdf-49177eed1807\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/genres/:genreId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"genres",
+										":genreId"
+									],
+									"variable": [
+										{
+											"key": "genreId",
+											"value": "2894f5fa-6799-4f1a-8298-25c45bcf0465"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "videos",
+					"item": [
+						{
+							"name": "create video with files",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Opercao qualquer ciosia",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "qualquer coisa",
+											"type": "text"
+										},
+										{
+											"key": "year_launched",
+											"value": "2008",
+											"type": "text"
+										},
+										{
+											"key": "opened",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "rating",
+											"value": "L",
+											"type": "text"
+										},
+										{
+											"key": "duration",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "video_file",
+											"type": "file",
+											"src": "/C:/Users/jkavdev/Downloads/Fumetsu-no-Anata-e-Season-2-768x1084.jpg"
+										},
+										{
+											"key": "trailer_file",
+											"type": "file",
+											"src": "/C:/Users/jkavdev/Downloads/Fumetsu-no-Anata-e-Season-2-768x1084.jpg"
+										},
+										{
+											"key": "banner_file",
+											"type": "file",
+											"src": "/C:/Users/jkavdev/Downloads/Fumetsu-no-Anata-e-Season-2-768x1084.jpg"
+										},
+										{
+											"key": "thumb_file",
+											"type": "file",
+											"src": "/C:/Users/jkavdev/Downloads/Fumetsu-no-Anata-e-Season-2-768x1084.jpg"
+										},
+										{
+											"key": "thumb_half_file",
+											"type": "file",
+											"src": "/C:/Users/jkavdev/Downloads/Fumetsu-no-Anata-e-Season-2-768x1084.jpg"
+										},
+										{
+											"key": "categories_id",
+											"value": "440e10c4a25b4581a0bacc50bc7e6435",
+											"type": "text"
+										},
+										{
+											"key": "genres_id",
+											"value": "8d44ac46e25b4a57bbbebd83127d5746",
+											"type": "text"
+										},
+										{
+											"key": "cast_members_id",
+											"value": "e591f2f3c3c9431eb620d96d2c66b18e",
+											"type": "text"
+										},
+										{
+											"key": "published",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/videos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"videos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrive a video",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/videos/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"videos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "d2d245663b3441618cd8624618251352"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrive a media",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/videos/:id/medias/:type",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"videos",
+										":id",
+										"medias",
+										":type"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "d2d245663b3441618cd8624618251352"
+										},
+										{
+											"key": "type",
+											"value": "THUMBNAIL_HALF"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update a media",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "media_file",
+											"type": "file",
+											"src": "/C:/Users/jkavdev/Downloads/Images/1920x1080-px-comic-art-comics-Marvel-Comics-Spider-Man-superhero-1094231.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/videos/:id/medias/:type",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"videos",
+										":id",
+										"medias",
+										":type"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "d2d245663b3441618cd8624618251352"
+										},
+										{
+											"key": "type",
+											"value": "THUMBNAIL_HALF"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "search videos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/videos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"videos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete a video",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/videos/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"videos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "d2d245663b3441618cd8624618251352"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update a video",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"NÃ£o cometa esses erros ao trabalhar com MicrosserviÃ§os\",\r\n    \"description\": \"Nesse vÃ­deo vocÃª entenderÃ¡ o que Ã© DTO (Data Transfer Object), quando e como utilizar no dia a dia,\\nbem como sua importÃ¢ncia para criar aplicaÃ§Ãµes com alta qualidade.\\n\",\r\n    \"duration\": 2.0,\r\n    \"year_launched\": 2028,\r\n    \"opened\": true,\r\n    \"published\": false,\r\n    \"rating\": \"12\",\r\n    \"cast_members\": [\r\n        \"b8514e25bc4743429f29fe2a6fe658db\"\r\n    ],\r\n    \"categories\": [\r\n        \"130047f5a54645db9f77cc766ed8798e\"\r\n    ],\r\n    \"genres\": [\r\n        \"97221a265bb646e5a223af64309eef55\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/videos/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"videos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "841b6ec242eb40c9a0765bf87fc2e58d"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create video without files",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"NÃ£o cometa esses erros ao trabalhar com MicrosserviÃ§os\",\r\n    \"description\": \"Nesse vÃ­deo vocÃª entenderÃ¡ o que Ã© DTO (Data Transfer Object), quando e como utilizar no dia a dia,\\nbem como sua importÃ¢ncia para criar aplicaÃ§Ãµes com alta qualidade.\\n\",\r\n    \"duration\": 2.0,\r\n    \"year_launched\": 2028,\r\n    \"opened\": true,\r\n    \"published\": false,\r\n    \"rating\": \"12\",\r\n    \"cast_members\": [\r\n        \"e591f2f3c3c9431eb620d96d2c66b18e\"\r\n    ],\r\n    \"categories\": [\r\n        \"440e10c4a25b4581a0bacc50bc7e6435\"\r\n    ],\r\n    \"genres\": [\r\n        \"8d44ac46e25b4a57bbbebd83127d5746\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/videos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"videos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
