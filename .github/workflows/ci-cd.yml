@@ -19,9 +19,6 @@ jobs:
   tests:
     name: Tests runner
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: fc3/Projeto prático - Java (Back-end)/fc3-admin-do-catalago
     # Configuração de passos do nosso job
     steps:
       # 1. Check-out do código fonte
