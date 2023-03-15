@@ -61,7 +61,7 @@ jobs:
         uses: gradle/gradle-build-action@v2.4.0
         
       - name: Build da aplicacao de fato
-        run: ./gradlew build
+        run: chmod +x gradlew && ./gradlew build
 
       # 5. Definir a variavel branch name
       - name: Set BUILD_TAG
