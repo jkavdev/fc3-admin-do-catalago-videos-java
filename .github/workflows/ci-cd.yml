@@ -59,9 +59,11 @@ jobs:
       # 4. Realizar o build para gerar o artefato final
       - name: Build da aplicacao
         uses: gradle/gradle-build-action@v2.4.0
+        with:
+          arguments: clean build -x test
         
-      - name: Build da aplicacao de fato
-        run: chmod +x gradlew && ./gradlew clean build -x test
+      # - name: Build da aplicacao de fato
+      #   run: chmod +x gradlew && ./gradlew clean build -x test
 
       # 5. Definir a variavel branch name
       - name: Set BUILD_TAG
